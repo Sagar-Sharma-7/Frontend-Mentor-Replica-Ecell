@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexbox($align, $justify){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+body{
+    font-family: 'Heebo', sans-serif;
+    background-color: rgb(238, 238, 238);
+    overflow-x: hidden;
+}
+
+.full-screen{
+    width: 100vw;
+    @include flexbox(center, center);
+    flex-direction: column;
+}
+.banner{
+    background-color: #3e54a3;
+    color: white;
+    font-size: 16px;
+    height: 48px;
+    text-align: center;
+    @include flexbox(center, center);
+    gap: 8px;
+    font-weight: 500;
+    width: 100vw;
+    a{
+        color: white;
+    }
+}
+
+.main-container{
+    width: 100vw;
+    max-width: 1472px;
+    header{
+        @include flexbox(center, space-between);
+        padding: 2rem;
+        text-transform: uppercase;
+        .logo-wrap{
+            transform: scale(1.1);
+        }
+        nav{
+            min-width: 512px;
+            @include flexbox(center, center);
+            gap: 2rem;
+            font-style: italic;
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+                font-weight: 600;
+                transition: 200ms;
+                position: relative;
+                &:after{
+                    content:'';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: red;
+                    transform: scaleX(0);
+                    transform-origin: bottom center;
+                    transition: transform 0.3s;
+                }
+                &:hover{
+                  &:after{
+                    transform-origin: bottom center;
+                    transform: scaleX(1);
+                  }  
+                }
+            }
+            button{
+                padding: 12px 24px;
+                background-color: black;
+                outline: none;
+                border: none;
+                color: white;
+                border-radius: 50px;
+                font-style: italic;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                @include flexbox(center, center);
+                gap: 12px;
+            }
+        }
+    }
+    .home-page{
+        @include flexbox(center, center);
+        width: 100vw;
+        height: calc(100vh - 200px);
+        div{
+            width: 50%;
+        }
+        .right-section{
+            padding: 3% 6%;
+            @include flexbox(flex-start, space-between);
+            flex-direction: column;
+            height: calc(100vh - 200px);
+            .main-heading{
+                font-size: 3em;
+                font-weight: 500;
+                color: #3e54a3;
+            }
+            .sub-heading{
+                color: gray;
+                font-size: 18px;
+            }
+            .github-home-btn{
+                padding: 12px 24px;
+                background-color: rgb(237, 44, 73);
+                outline: none;
+                border: none;
+                color: white;
+                border-radius: 50px;
+                font-style: italic;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                @include flexbox(center, center);
+                gap: 12px;
+            }
+            .community-banner{
+                background-color: white;
+                @include flexbox(center, center);
+                width: 100%;
+                gap: 20px;
+                padding: 16px;
+                border-radius: 12px;
+                img{
+                    height: 60px;
+                }
+                p{
+                    font-size: 18px;
+                    span{
+                        color: #3e54a3;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+        .left-section{
+            img{
+                height: calc(100vh - 200px);
+            }
+        }
+    }
+}

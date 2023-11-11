@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  background-color: rgb(238, 238, 238);
+  overflow-x: hidden;
+}
+
+.full-screen {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner {
+  background-color: #3e54a3;
+  color: white;
+  font-size: 16px;
+  height: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  width: 100vw;
+}
+.banner a {
+  color: white;
+}
+
+.main-container {
+  width: 100vw;
+  max-width: 1472px;
+}
+.main-container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+.main-container header .logo-wrap {
+  transform: scale(1.1);
+}
+.main-container header nav {
+  min-width: 512px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-style: italic;
+}
+.main-container header nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 200ms;
+  position: relative;
+}
+.main-container header nav a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.3s;
+}
+.main-container header nav a:hover:after {
+  transform-origin: bottom center;
+  transform: scaleX(1);
+}
+.main-container header nav button {
+  padding: 12px 24px;
+  background-color: black;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.main-container .home-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 200px);
+}
+.main-container .home-page div {
+  width: 50%;
+}
+.main-container .home-page .right-section {
+  padding: 3% 6%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+}
+.main-container .home-page .right-section .main-heading {
+  font-size: 3em;
+  font-weight: 500;
+  color: #3e54a3;
+}
+.main-container .home-page .right-section .sub-heading {
+  color: gray;
+  font-size: 18px;
+}
+.main-container .home-page .right-section .github-home-btn {
+  padding: 12px 24px;
+  background-color: rgb(237, 44, 73);
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.main-container .home-page .right-section .community-banner {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 12px;
+}
+.main-container .home-page .right-section .community-banner img {
+  height: 60px;
+}
+.main-container .home-page .right-section .community-banner p {
+  font-size: 18px;
+}
+.main-container .home-page .right-section .community-banner p span {
+  color: #3e54a3;
+  font-weight: 800;
+}
+.main-container .home-page .left-section img {
+  height: calc(100vh - 200px);
+}/*# sourceMappingURL=style.css.map */
